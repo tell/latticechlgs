@@ -1,0 +1,3 @@
+[submodule "submods/ntl-unix"]
+	path = submods/ntl-unix
+	url = https://github.com/tell/ntl-unix.git
