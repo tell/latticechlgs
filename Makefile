@@ -1,8 +1,12 @@
 include common.mk
 
-.PHONY: all clean submods
+.PHONY: all check clean submods
 
 all: submods generators.done
+
+check:
+	$(MAKE) -C generators check
+
 clean:
 	-$(RM) *.done
 	-$(MAKE) -C generators clean
