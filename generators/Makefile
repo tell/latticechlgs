@@ -1,8 +1,10 @@
 SRCS=$(wildcard *.cpp)
 DEST=$(SRCS:%.cpp=%)
 
+ifneq ($(MAKECMDGOALS),clean)
 ifeq (1,$(shell test -d "$(NTL_PREFIX)" || echo 1))
 $(error Not found: "$(NTL_PREFIX)")
+endif
 endif
 
 CXXFLAGS += -g3 -O0 -Wall
