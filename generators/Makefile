@@ -1,3 +1,5 @@
+include ../common.mk
+
 SRCS=$(wildcard *.cpp)
 DEST=$(SRCS:%.cpp=%)
 
