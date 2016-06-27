@@ -9,7 +9,7 @@ addons:
       # - deadsnakes
     - ubuntu-toolchain-r-test
     packages:
-    - build-essentials
+    - build-essential
     - libgmp-dev
 cache:
   apt: true
