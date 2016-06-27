@@ -1,0 +1,26 @@
+language: cpp
+sudo: false
+
+os: linux
+compiler: gcc
+addons:
+  apt:
+    sources:
+      # - deadsnakes
+    - ubuntu-toolchain-r-test
+    packages:
+    - build-essentials
+    - libgmp-dev
+cache:
+  apt: true
+
+before_script:
+- g++ --version
+- make
+script:
+- make check
+
+notifications:
+  on_success: change
+  on_failure: always
+
