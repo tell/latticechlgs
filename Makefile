@@ -1,11 +1,17 @@
 SRCS=$(wildcard *.cpp)
-DEST=$(patsubst %.cpp,%,${SRCS})
+DEST=$(SRCS:%.cpp=%)
+
+ifeq (1,$(shell test -d "$(NTL_PREFIX)" || echo 1))
+$(error Not found: "$(NTL_PREFIX)")
+endif
+
+CXXFLAGS += -g3 -O0 -Wall
+CPPFLAGS += -I $(NTL_PREFIX)/include
+LDFLAGS += -L $(NTL_PREFIX)/lib
+LDLIBS += -lntl -lgmp -lm
 
 all: ${DEST}
 
 clean:
-	rm ${DEST} *~
-
-%: %.cpp *.h
-	g++ -g3 -O0 -Wall -static -o $@ $< -lntl -lgmp -lm
+	$(RM) ${DEST} *~
 
