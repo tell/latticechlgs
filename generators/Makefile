@@ -3,7 +3,7 @@ DEST=$(SRCS:%.cpp=%)
 
 ifneq ($(MAKECMDGOALS),clean)
 ifeq (1,$(shell test -d "$(NTL_PREFIX)" || echo 1))
-$(error Not found: "$(NTL_PREFIX)")
+$(error Not found: NTL_PREFIX="$(NTL_PREFIX)")
 endif
 endif
 

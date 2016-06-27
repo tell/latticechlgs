@@ -4,8 +4,8 @@ include common.mk
 
 all: $(PREFIX_EXTRA) generators.done
 clean:
+	-$(RM) *.done
 	-$(MAKE) -C generators clean
-	$(RM) *.done
 
 generators.done:
 	$(MAKE) -C $(@:%.done=%)
