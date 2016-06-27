@@ -11,4 +11,4 @@ Note that its implementation has been changed since a version 9.4.0, so that the
 
 # Copyright Notices
 
-The copyrights belong to the authors of [SVP Challenge](https://www.latticechallenge.org/svp-challenge/) and [Ideal Lattice Challenge](https://www.latticechallenge.org/ideallattice-challenge/), please refer them for the details.
+The copyrights belong to the authors of [SVP Challenge](https://www.latticechallenge.org/svp-challenge/) and [Ideal Lattice Challenge](https://www.latticechallenge.org/ideallattice-challenge/).
