@@ -12,7 +12,9 @@ Namely, the generators built with newer versions of NTL will output different in
 
 ## Copyright Notices
 
-The copyrights belong to the authors of [SVP Challenge](https://www.latticechallenge.org/svp-challenge/) and [Ideal Lattice Challenge](https://www.latticechallenge.org/ideallattice-challenge/).
+This repository contains mirrors. The copyrights of mirrored files belong to their authors, for examples:
+- The copyrights of files located in `generators` belong to the authors of [SVP Challenge](https://www.latticechallenge.org/svp-challenge/) and [Ideal Lattice Challenge](https://www.latticechallenge.org/ideallattice-challenge/).
 
 ## CI
 - Travis CI [![Build Status](https://travis-ci.org/tell/latticechlgs.svg?branch=master)](https://travis-ci.org/tell/latticechlgs)
+
