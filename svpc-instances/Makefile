@@ -1,16 +1,18 @@
 .DEFAULT_GOAL := do
 
-DIMs = $(shell seq 100 2000)
-INSTANCEs = $(addprefix svpc_dim-,$(addsuffix _seed-0.txt,$(DIMs)))
+ifeq ($(GEN.path),)
+export GEN.path = $(realpath ../generators/generate_random)
+endif
 
 .PHONY: do
 do:
-	$(info Dimensions: $(DIMs))
 
-define GEN.do
-../generators/generate_random --dim $1 --seed 0 > $@
-endef
-
-$(INSTANCEs):
-	$(call GEN.do,$(shell echo $@ | sed -e 's/.*dim-\([0-9]*\)_.*/\1/'))
-all-instances: $(INSTANCEs)
+DIRs = svpc_dim-0k svpc_dim-1k svpc_dim-2k
+$(DIRs):
+	mkdir -p $@
+gen-svpc_dim-0k: svpc_dim-0k
+	$(MAKE) -f ../generator.mk -C $< all-instances DIM_MIN=40 DIM_MAX=999
+gen-svpc_dim-1k: svpc_dim-1k
+	$(MAKE) -f ../generator.mk -C $< all-instances DIM_MIN=1000 DIM_MAX=1999
+gen-svpc_dim-2k: svpc_dim-2k
+	$(MAKE) -f ../generator.mk -C $< all-instances DIM_MIN=2000 DIM_MAX=2100
