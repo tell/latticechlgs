@@ -1,11 +1,5 @@
 include ../common.mk
 
-CXX = g++
-ifeq (Darwin,$(shell uname -s))
-$(info Detected OS name is Darwin.)
-CXX = clang++
-endif
-
 .PHONY: all
 all: ntl-unix.done
 
