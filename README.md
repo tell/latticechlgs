@@ -1,4 +1,7 @@
 # latticechlgs
+
+[![Build Status](https://travis-ci.org/tell/latticechlgs.svg?branch=master)](https://travis-ci.org/tell/latticechlgs)
+
 Mirrors and scripts for challenges related to the lattice cryptosystems
 
 ## Mirrors
@@ -12,9 +15,5 @@ An internal implementation for PRNG of newer versions of NTL has been changed, s
 
 ## Copyright Notices
 
-This repository contains mirrors. The copyrights of mirrored files belong to their authors, for examples:
+This repository contains mirrors. The copyrights of copied files belong to their authors, for examples:
 - The copyrights of files located in `generators` belong to the authors of [SVP Challenge](https://www.latticechallenge.org/svp-challenge/) and [Ideal Lattice Challenge](https://www.latticechallenge.org/ideallattice-challenge/).
-
-## CI
-- Travis CI [![Build Status](https://travis-ci.org/tell/latticechlgs.svg?branch=master)](https://travis-ci.org/tell/latticechlgs)
-
