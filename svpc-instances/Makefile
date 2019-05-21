@@ -16,6 +16,8 @@ help: ## Print help texts of goals.
 DIRs = svpc_dim-0k svpc_dim-1k svpc_dim-2k
 $(DIRs):
 	mkdir -p $@
+gen-svpc_dim-40-50: svpc_dim-0k ## A target.
+	$(MAKE) -f ../generator.mk -C $< all-instances DIM_MIN=40 DIM_MAX=50
 gen-svpc_dim-0k: svpc_dim-0k ## A target.
 	$(MAKE) -f ../generator.mk -C $< all-instances DIM_MIN=40 DIM_MAX=999
 gen-svpc_dim-1k: svpc_dim-1k ## A target.
