@@ -11,7 +11,7 @@ matrix = Literal('[') + OneOrMore(Group(vector)) + Literal(']')
 
 def __cstor_vector(data): # {{{
     '''
-    parse_lwe_problemでトークナイズした結果から
+    トークナイズした結果から
     listを生成
     '''
     v = []
@@ -22,7 +22,7 @@ def __cstor_vector(data): # {{{
 # }}}
 def __cstor_matrix(data): # {{{
     '''
-    parse_lwe_problemでトークナイズした結果から
+    トークナイズした結果から
     listのlistを生成
     '''
     m = []
