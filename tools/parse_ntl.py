@@ -1,4 +1,4 @@
-# -*- coding:utf-8 -*-
+# -*- coding: utf-8-unix -*-
 
 import six
 import sys
@@ -11,8 +11,7 @@ matrix = Literal('[') + OneOrMore(Group(vector)) + Literal(']')
 
 def __cstor_vector(data): # {{{
     '''
-    パース結果から
-    listを生成
+    Generate a list for vector from parsed objects.
     '''
     v = []
     for n in data:
@@ -22,8 +21,7 @@ def __cstor_vector(data): # {{{
 # }}}
 def __cstor_matrix(data): # {{{
     '''
-    パース結果から
-    listのlistを生成
+    Generate a list for matrix from parsed objects.
     '''
     m = []
     for v in data:
